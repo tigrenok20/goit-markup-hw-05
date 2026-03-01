@@ -487,7 +487,112 @@
             </ul>
           </div>
         </div>
+        <form class="footer-form">
+          <div>
+            <label class="footer-email-label">Subscribe</label>
+            <input
+              class="form-email-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+          </div>
+          <div class="footer-submit-container">
+            <button class="footer-submit" type="submit" width="165" height="40">
+              Submit
+              <svg class="submit-icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
+
+    <!--Modal window-->
+    <div class="backdrop">
+      <div class="modal">
+        <div class="modal-header-button">
+          <div class="modal-close">
+            <svg class="close-icon" width="8" height="8">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </div>
+        </div>
+        <p class="callback-prompt">
+          Leave your contacts and we will call you back
+        </p>
+        <form>
+          <div class="callback-field">
+            <label class="callback-label" for="username">Name</label>
+            <div class="callback-wrapper">
+              <input
+                class="callback-input"
+                type="text"
+                name="username"
+                id="username"
+              />
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="callback-field">
+            <label class="callback-label" for="phone">Phone</label>
+            <div class="callback-wrapper">
+              <input class="callback-input" name="phone" id="phone" />
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="callback-field">
+            <label class="callback-label" for="email">Email</label>
+            <div class="callback-wrapper">
+              <input
+                class="callback-input"
+                type="email"
+                name="email"
+                id="email"
+              />
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="callback-field">
+            <label class="callback-label" for="comment">Comment</label>
+            <textarea
+              class="callback-comment"
+              name="comment"
+              rows="5"
+              placeholder="Text input"
+              id="comment"
+            >
+            </textarea>
+          </div>
+          <label class="callback-agreement">
+            <input
+              class="callback-input-checkbox visually-hidden"
+              type="checkbox"
+              name="action"
+              checked
+              id="accept-terms"
+            />
+            <span class="callback-toggler">
+              <svg class="callback-toggler-icon" width="10" height="10">
+                <use href="./images/icons.svg#check"></use>
+              </svg>
+            </span>
+            I accept the terms and conditions of the
+            <a class="callback-link" href="#">Privacy Policy</a>
+          </label>
+
+          <div class="callback-button">
+            <button class="modal-button" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
