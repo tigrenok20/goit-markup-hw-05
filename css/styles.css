@@ -540,6 +540,10 @@ img {
 }
 
 .form-email-input {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   background: transparent;
   outline: none;
   border: 1px solid #fff;
@@ -658,10 +662,24 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, border;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: #404bbf;
+  border: transparent;
 }
 
 .close-icon {
-  stroke: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover .close-icon,
+.modal-close:focus .close-icon,
+.close-icon:focus {
+  fill: #fff;
 }
 
 .dialog-header-batton {
@@ -684,15 +702,14 @@ img {
   margin-bottom: 16px;
 }
 
-.callback-comment {
-  resize: none;
-  width: 100%;
-}
-
 .callback-field {
   width: 100%;
   position: relative;
   margin-bottom: 8px;
+}
+
+.callback-field.callback-comment-field {
+  margin-bottom: 16px;
 }
 
 .callback-label {
@@ -700,6 +717,7 @@ img {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -712,7 +730,7 @@ img {
   width: 100%;
   padding: 8px 8px 8px 36px;
   outline: none;
-  transition: border-color 150ms ease-in;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   height: 40px;
@@ -729,7 +747,7 @@ img {
   transform: translateY(-50%);
   fill: #2e2f42;
   pointer-events: none;
-  transition: stroke 150ms ease-in;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .callback-input:focus + .modal-icon {
@@ -737,13 +755,14 @@ img {
 }
 
 .callback-comment {
+  min-height: 120px;
   width: 100%;
   outline: none;
   padding: 8px 16px;
   resize: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  transition: border-color 150ms ease-in;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .callback-comment:focus {
@@ -776,7 +795,7 @@ img {
   margin-right: 8px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: 150ms ease-in;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color, border-color;
   cursor: pointer;
 }
@@ -789,7 +808,7 @@ img {
 
 .callback-toggler-icon {
   opacity: 0;
-  transition: opacity 150ms ease-in;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .callback-input-checkbox:checked + .callback-toggler > .callback-toggler-icon {
@@ -833,13 +852,6 @@ img {
   margin: 0;
   border: none;
   width: 100%;
-}
-
-.comment-text {
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  width: 100%;
-  min-height: 120px;
 }
 
 /* #endregion modal */
